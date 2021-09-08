@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  display: grid;
+
+}
+header{
+  background: rgb(41, 51, 107);
+  color:#fff;
+  border-bottom: 2px solid crimson;
+}
+header .container{
+  margin: 0 4rem;
+  padding: 1rem;
+  display: grid;
+  grid-template-areas:
+    "h1 nav";
+  align-items: center;
+}
+header .container h1{
+  grid-area: h1;
+}
+header .container nav{
+  grid-area: nav;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+header .container h1::first-letter{
+  color:crimson;
+}
+nav ul{
+  display: flex;
+  list-style: none;
+
+}
+nav ul li a{
+  color: #fff;
+  padding: 1rem;
+  list-style: none;
+  text-decoration: none;
+}
+a.active{
+  border-bottom:2px solid crimson
+}
+nav ul li a:hover{
+  background: crimson;
+
+}
+
+#showcase .container{
+  margin: 4rem;
+  margin-top: 7.5rem;
+}
+#showcase{
+  min-height: 400px;
+  background: url('../img/showcase.jpg') no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: #ffffff;
+
+}
+
+#showcase .container h1{
+  font-size: 3em;
+  margin-bottom: 1rem;
+}
+#showcase .container p{
+  font-size: 1.1em;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+
+#newletter{
+
+  background: rgb(41, 51, 107);
+  color: #fff;
+
+}
+
+#newletter .container{
+  height: 4rem;
+  margin: 0 4rem;
+  display: grid;
+  grid-template-areas:
+    "h1 form";
+  align-items: center;
+}
+#newletter .container form{
+  grid-area: form;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+#newletter .container h1{
+  grid-area: h1;
+}
+form input{
+  font-size: 1em;
+  border: 0;
+  padding: 0.4rem;
+  margin: 0 0.6rem 0 0;
+}
+form input:focus{
+  outline: none;
+}
+form button{
+  border: 0;
+  padding: 0.4rem 1rem;
+  font-size: 1em;
+  color: #fff;
+  background: crimson;
+  cursor: pointer;
+}
+#boxes{
+  margin: 4rem;
+}
+#boxes .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 30px;
+}
+#boxes .container .box{
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid grey;
+  box-shadow:  0 3px 5px rgba(107, 107, 107, 0.6);
+  border-radius: 5%;
+}
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  background: rgb(41, 51, 107);
+  color: #fff;
+}
+h3{
+  margin:1rem 0;
+}
+p{
+  line-height: 1.2rem;
+}
+#boxes .container .box img{
+  border-radius: 100%;
+  box-shadow:  0 1px 5px rgba(107, 107, 107, 0.6);
+}
+@media (max-width:768px) {
+
+}
+@media (max-width:670px) {
+  header .container{
+    grid-template-areas:
+      "h1"
+      "nav";
+    justify-content: center;
+    align-content: center;
+    height: 7rem;
+    grid-gap: 16px;
+    margin: 0 ;
+    padding:1rem 0;
+  }
+  header .container nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 ;
+  }
+  #newletter .container{
+    height: 6rem;
+    grid-template-areas:
+      "h1"
+      "form";
+    align-items: center;
+    justify-content: center;
+    margin: 0 ;
+  }
+  #boxes .container{
+    margin: 0;
+  }
+
+  #showcase .container{
+
+  }
+
+  #showcase .container h1{
+    font-size: 2.4em;
+    margin-bottom: 0.6rem;
+  }
+  #showcase .container p{
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width:576px ) {
+
+
+}
+@media (max-width:352px ) {
+  #newletter .container{
+    margin: 1.2rem 0;
+  }
+
+  #newletter .container form{
+    flex-direction: column;
+  }
+  #newletter .container form input{
+    width: 100%;
+    margin: 0.6rem;
+  }
+  #newletter .container form button{
+    width: 100%;
+  }
+  #boxes  {
+    margin: 0;
+    margin-top: 2rem;
+  }
+
+  #showcase .container{
+    margin-top: 2em;
+  }
+
+  #showcase .container h1{
+    font-size: 2em;
+    margin-bottom: 0.6rem;
+  }
+  #showcase .container p{
+    margin-bottom: .6rem;
+  }
+
+}
+@media (max-width:320 ) {
+  #showcase .container{
+    margin: 0;
+    margin-top: 2em;
+  }
+}
