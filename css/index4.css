@@ -155,7 +155,9 @@ p{
   box-shadow:  0 1px 5px rgba(107, 107, 107, 0.6);
 }
 @media (max-width:768px) {
-
+  header .container, #newletter .container, #box .container{
+    margin: 0;
+  }
 }
 @media (max-width:670px) {
   header .container{
@@ -182,23 +184,14 @@ p{
       "form";
     align-items: center;
     justify-content: center;
-    margin: 0 ;
-  }
-  #boxes .container{
-    margin: 0;
   }
 
-  #showcase .container{
 
-  }
 
   #showcase .container h1{
     font-size: 2.4em;
-    margin-bottom: 0.6rem;
   }
-  #showcase .container p{
-    margin-bottom: 1rem;
-  }
+
 }
 @media (max-width:576px ) {
 
@@ -219,10 +212,6 @@ p{
   #newletter .container form button{
     width: 100%;
   }
-  #boxes  {
-    margin: 0;
-    margin-top: 2rem;
-  }
 
   #showcase .container{
     margin-top: 2em;
@@ -238,8 +227,5 @@ p{
 
 }
 @media (max-width:320 ) {
-  #showcase .container{
-    margin: 0;
-    margin-top: 2em;
-  }
+
 }
